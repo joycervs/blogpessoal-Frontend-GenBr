@@ -6,6 +6,7 @@ import { buscar, deletar } from "../../../services/Service"
 import { RotatingLines } from "react-loader-spinner"
 import { ToastAlerta } from "../../../utils/ToastAlerta"
 
+
 function DeletarPostagem() {
 
     const navigate = useNavigate()
@@ -34,7 +35,7 @@ function DeletarPostagem() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado', "info")
+            ToastAlerta('Você precisa estar logado', "info")
             navigate('/')
         }
     }, [token])

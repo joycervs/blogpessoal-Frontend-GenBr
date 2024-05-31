@@ -60,7 +60,7 @@ function FormPostagem() {
 
     useEffect(() => {
         if (token === '') {
-            alert('Você precisa estar logado', 'info');
+            ToastAlerta('Você precisa estar logado', 'info');
             navigate('/');
         }
     }, [token])
@@ -123,7 +123,7 @@ function FormPostagem() {
                     },
                 })
 
-                alert('Postagem cadastrada com sucesso', 'sucesso');
+                ToastAlerta('Postagem cadastrada com sucesso', 'sucesso');
 
             } catch (error: any) {
                 if (error.toString().includes('401')) {
