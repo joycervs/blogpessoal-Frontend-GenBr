@@ -29,6 +29,7 @@ function App() {
                     <Route path="/" element={<Login/>} />
                     <Route path="/home" element={<Home />} />
                     <Route path="/cadastro" element={<Cadastro />} />
+                    <Route path="/perfil" element={<Perfil />}/>
                     <Route path="/login" element={<Login />} />
                     <Route path="/temas" element={<ListaTemas />} />
                     <Route path="/cadastrartema" element={<FormTema />} />
@@ -38,7 +39,6 @@ function App() {
                   <Route path="/cadastrarpostagem" element={<FormPostagem />} />
                   <Route path="/editarpostagem/:id" element={<FormPostagem />} />
               <Route path="/deletarpostagem/:id" element={<DeletarPostagem />} />
-              <Route path="./perfil" element={<Perfil />}/>
                   </Routes>
             </div>
             <Footer />
