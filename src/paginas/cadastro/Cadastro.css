@@ -7,3 +7,17 @@
   background-position: center center;
   font-family: 'Poppins', sans-serif;
 }
+
+.formcadastro{
+  color: #fff;
+  border-style: none;
+  background: inherit;
+  border: 2px solid #ffffff83;
+
+}
+
+input:focus{
+  border-color: #fff;
+  outline: none;
+}
+

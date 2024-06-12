@@ -45,25 +45,23 @@ function Login() {
                 >
                     <h2 className="text-white text-4xl my-4">Entrar</h2>
                     <div className="flex flex-col w-full">
-                        <label className='text-white' htmlFor="usuario">Usuário</label>
                         <input
                             type="text"
                             id="usuario"
                             name="usuario"
                             placeholder="Usuario"
-                            className=" rounded p-2"
+                            className=" rounded p-2 formlogin placeholder:text-[#e6e0e0]"
                             value={usuarioLogin.usuario}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         />
                     </div>
                     <div className="flex flex-col w-full">
-                        <label className='text-white' htmlFor="senha">Senha</label>
                         <input
                             type="password"
                             id="senha"
                             name="senha"
                             placeholder="Senha"
-                            className="rounded p-2"
+                            className="rounded p-2 formlogin placeholder:text-[#e6e0e0]"
                             value={usuarioLogin.senha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         />
@@ -90,7 +88,7 @@ function Login() {
                     <p className='text-white'>
                         Ainda não tem uma conta?{' '}
                     </p>
-                    <Link to='/cadastro' className="text-[#632c59]   font-bold hover:underline">
+                    <Link to='/cadastro' className="text-white   font-bold hover:underline">
                             Cadastre-se
                     </Link>
                 </form>
