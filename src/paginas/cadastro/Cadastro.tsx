@@ -68,83 +68,83 @@ function Cadastro() {
 
     return (
         <>
-        <div className="grid grid-cols-1 lg:grid-cols-2 h-screen 
-                place-items-center font-bold">
-            <div className="fundoCadastro hidden lg:block"></div>
-                <form className='flex justify-center items-center flex-col w-2/3 gap-3' 
+            <div className="fundoCadastro hidden lg:block">
+                <div className="flex justify-center align-center h-screen mx-auto   place-items-center w-2/5">
+                <div className='backdrop-blur-lg  w-4/5 border-2 h-auto border-[#ffffff33] rounded-lg'>
+                <form className='flex justify-center items-center mx-4 my-8 align-center flex-col gap-4' 
                     onSubmit={cadastrarNovoUsuario}
                 >
-                <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
+                <h2 className='text-white text-4xl'>Cadastrar</h2>
                 <div className="flex flex-col w-full">
-                    <label htmlFor="nome">Nome</label>
+                    <label className='text-white' htmlFor="nome">Nome</label>
                     <input
                     type="text"
                     id="nome"
                     name="nome"
                     placeholder="Nome"
-                    className="border-2 border-slate-700 rounded p-2"
+                    className="rounded p-2"
                     value={usuario.nome}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
                 <div className="flex flex-col w-full">
-                    <label htmlFor="usuario">Usuario</label>
+                    <label className='text-white' htmlFor="usuario">Usuario</label>
                     <input
                     type="text"
                     id="usuario"
                     name="usuario"
                     placeholder="Usuário"
-                    className="border-2 border-slate-700 rounded p-2"
+                    className="rounded p-2"
                     value={usuario.usuario}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
                 <div className="flex flex-col w-full">
-                    <label htmlFor="foto">Foto</label>
+                    <label className='text-white' htmlFor="foto">Foto</label>
                     <input
                     type="text"
                     id="foto"
                     name="foto"
                     placeholder="Foto"
-                    className="border-2 border-slate-700 rounded p-2"
+                    className=" rounded p-2"
                     value={usuario.foto}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
                 <div className="flex flex-col w-full">
-                    <label htmlFor="senha">Senha</label>
+                    <label className='text-white' htmlFor="senha">Senha</label>
                     <input
                     type="password"
                     id="senha"
                     name="senha"
                     placeholder="Senha"
-                    className="border-2 border-slate-700 rounded p-2"
+                    className=" rounded p-2"
                     value={usuario.senha}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                     />
                 </div>
                 <div className="flex flex-col w-full">
-                    <label htmlFor="confirmarSenha">Confirmar Senha</label>
+                    <label className='text-white' htmlFor="confirmarSenha">Confirmar Senha</label>
                     <input
                     type="password"
                     id="confirmarSenha"
                     name="confirmarSenha"
                     placeholder="Confirmar Senha"
-                    className="border-2 border-slate-700 rounded p-2"
+                    className="rounded p-2"
                     value={confirmaSenha}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => handleConfirmaSenha(e)}
                     />
                 </div>
                 <div className="flex justify-around w-full gap-8">
-                    <button className='rounded text-white bg-red-400 
-                        hover:bg-red-700 w-1/2 py-2' 
+                    <button className='rounded text-white bg-[#AA81A3] 
+                        hover:bg-[#97478a] w-1/2 py-2' 
                         onClick={retornar}
                         >
                     Cancelar
                     </button>
                     <button
                         type='submit'
-                        className='rounded text-white bg-indigo-400 hover:bg-indigo-900 w-1/2 py-2
+                        className='rounded text-white bg-[#235F47] hover:bg-[#164736] w-1/2 py-2
                             flex justify-center'
                     >
                         {isLoading ? <RotatingLines
@@ -158,8 +158,10 @@ function Cadastro() {
                     }
                     </button>
                 </div>
-                </form>
-        </div>
+                        </form>
+                        </div>
+                </div>
+                </div>
         </>
     )
     }

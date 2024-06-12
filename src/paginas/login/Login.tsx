@@ -37,39 +37,41 @@ function Login() {
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen place-items-center font-bold ">
-                <form className="flex justify-center items-center flex-col w-1/2 gap-4" 
+            <div className="fundoLogin hidden lg:block">
+                <div className="flex justify-center align-center h-screen mx-auto   place-items-center w-2/5">
+                <div className='backdrop-blur-lg  w-4/5 border-2 h-auto border-[#ffffff33] rounded-lg'>
+                <form className="flex justify-center items-center mx-4 my-8 align-center flex-col gap-4" 
                     onSubmit={login}
                 >
-                    <h2 className="text-slate-900 text-5xl ">Entrar</h2>
+                    <h2 className="text-white text-4xl my-4">Entrar</h2>
                     <div className="flex flex-col w-full">
-                        <label htmlFor="usuario">Usuário</label>
+                        <label className='text-white' htmlFor="usuario">Usuário</label>
                         <input
                             type="text"
                             id="usuario"
                             name="usuario"
                             placeholder="Usuario"
-                            className="border-2 border-slate-700 rounded p-2"
+                            className=" rounded p-2"
                             value={usuarioLogin.usuario}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         />
                     </div>
                     <div className="flex flex-col w-full">
-                        <label htmlFor="senha">Senha</label>
+                        <label className='text-white' htmlFor="senha">Senha</label>
                         <input
                             type="password"
                             id="senha"
                             name="senha"
                             placeholder="Senha"
-                            className="border-2 border-slate-700 rounded p-2"
+                            className="rounded p-2"
                             value={usuarioLogin.senha}
                             onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
                         />
                     </div>
                     <button
                         type='submit'
-                        className="rounded bg-indigo-400 flex justify-center
-                         hover:bg-indigo-900 text-white w-1/2 py-2">
+                        className="rounded bg-[#235F47] hover:bg-[#164736] flex justify-center
+                         text-white w-1/2 py-2">
 
                         {isLoading ?
 
@@ -81,18 +83,19 @@ function Login() {
                                 visible={true}
                             />
                             :
-                            <span>Entrar</span>
+                            <span >Entrar</span>
                         }
                         
                     </button>
-                    <p>
+                    <p className='text-white'>
                         Ainda não tem uma conta?{' '}
                     </p>
-                    <Link to='/cadastro' className="text-indigo-800 hover:underline">
+                    <Link to='/cadastro' className="text-[#632c59]   font-bold hover:underline">
                             Cadastre-se
                     </Link>
                 </form>
-                <div className="fundoLogin hidden lg:block"></div>
+                    </div>
+                    </div>
             </div>
         </>
     );
