@@ -22,7 +22,7 @@ function App() {
     <>
       <AuthProvider>
         <ToastContainer/>
-          <BrowserRouter>
+        <BrowserRouter>
             <Navbar />
             <div className='min-h-[80vh]'>
             <Routes>

@@ -1,11 +1,12 @@
 import ListaPostagens from "../../components/postagens/listapostagens/ListaPostagens";
 import ModalPostagem from "../../components/postagens/modalpostagem/ModalPostagem";
+import './Home.css';
 
 
 function Home() {
     return (
         <>
-            <div className='bg-indigo-900 flex justify-center'>
+            <div className='fundoHome flex justify-center'>
                 <div className="container grid grid-cols-2 text-white">
                     <div className="flex flex-col items-center gap-4 justify-center py-4"
                     >
@@ -21,8 +22,8 @@ function Home() {
                     
 
                     <div className="flex flex-col justify-center">
-                        <img src="https://i.imgur.com/VpwApCU.png"
-                            alt="Imagem da página home" className="w-2/3" />
+                        <img src="https://ik.imagekit.io/joyce/blogpessoal/Online%20resume-cuate.svg?updatedAt=1718507561478"
+                            alt="Imagem da página home" className="w-4/5" />
                     </div>
                     
                 </div>
